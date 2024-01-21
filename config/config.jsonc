@@ -1,0 +1,11 @@
+{
+    "clientId": "", // The id of the discord bot
+    "mainColor": "f6c42f", // The hex color of the embeds by default
+    "lang": "main", // If you want to set english please set "main"
+    "activity": {
+      "status": "online", // The status of the bot
+      "type": "PLAYING", // The type of the activity
+      "name": "!help" // The name of the activity
+    }
+  }
+  
