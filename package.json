@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "deploy": "node deploy/deployGlobal",
+    "guild": "node deploy/deployGuild",
+    "destroy-guild": "node deploy/destroyGuild",
+    "destroy-global": "node deploy/destroyGlobal"
   },
   "keywords": [],
   "author": "",
