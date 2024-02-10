@@ -1,10 +1,14 @@
 //Deletes every commands from every server yikes!!1!!11!!
+require('dotenv').config()
 const readline = require("readline");
+const fs = require("node:fs");
 const path = require('node:path');
 const jsonc = require('jsonc');
 const { REST } = require("@discordjs/rest");
 const { Routes } = require("discord-api-types/v9");
 const config = jsonc.parse(fs.readFileSync(path.join(__dirname, '../config/config.jsonc'), 'utf8'));
+const token = process.env.TOKEN;
+
 
 const rl = readline.createInterface({
 	input: process.stdin,
@@ -12,7 +16,7 @@ const rl = readline.createInterface({
 });
 
 (async () => {
-	const rest = new REST({ version: "10" }).setToken(config.token);
+	const rest = new REST({ version: "10" }).setToken(token);
 	
 	if (!process.argv.includes("--global")) {
 		rl.question(
